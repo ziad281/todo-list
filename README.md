@@ -1,16 +1,12 @@
-# todo-list
-Simple command-line To-Do List in python 
-# To-Do List (Python)
+# To-Do List App 📝
 
-Simple command-line To-Do list app written in Python.  
-You can add, remove, and list tasks easily from the terminal.
+ده مشروع بسيط بلغة Python بيسمحلك تضيف وتحذف مهام وتعرضها.
 
-## Features
-- Add tasks
-- Mark tasks as done
-- Delete tasks
-- Save tasks to file
+## 📌 الوظائف اللي بيعملها:
+- إضافة مهمة جديدة ✅
+- حذف مهمة ❌
+- عرض المهام الحالية 🗂
 
-## How to Run
-```bash
-python todo_list.py
+## ⚙️ طريقة التشغيل:
+1. تأكد إن Python متسطب على الجهاز.
+2. شغل الملف من التيرمنال كده:

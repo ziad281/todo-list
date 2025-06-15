@@ -1,0 +1,48 @@
+tasks = []
+
+def show_menu():
+    print("\nماذا تريد أن تفعل؟")
+    print("1. إضافة مهمة جديدة")
+    print("2. عرض كل المهام")
+    print("3. حذف مهمة")
+    print("4. خروج")
+
+while True:
+    show_menu()
+    choice = input("اختر رقم (1/2/3/4): ")
+
+    if choice == '1':
+        task = input("اكتب المهمة: ")
+        tasks.append(task)
+        print("✔️ تم إضافة المهمة.")
+
+    elif choice == '2':
+        if not tasks:
+            print("📭 لا توجد مهام.")
+        else:
+            print("📋 قائمة المهام:")
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
+
+    elif choice == '3':
+        if not tasks:
+            print("❌ لا يوجد مهام لحذفها.")
+        else:
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
+            try:
+                num = int(input("اكتب رقم المهمة اللي عايز تحذفها: "))
+                if 1 <= num <= len(tasks):
+                    removed = tasks.pop(num - 1)
+                    print(f"🗑️ تم حذف المهمة: {removed}")
+                else:
+                    print("⚠️ رقم غير صحيح.")
+            except ValueError:
+                print("⚠️ من فضلك اكتب رقم بس.")
+
+    elif choice == '4':
+        print("👋 مع السلامة!")
+        break
+
+    else:
+        print("❗اختيار غير صالح.")
